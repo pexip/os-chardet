@@ -1,13 +1,15 @@
 Source: chardet
 Section: python
 Priority: optional
-Maintainer: Piotr Ożarowski <piotr@debian.org>
-Uploaders: Mark Pilgrim <mark@diveintomark.org>, Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
+XSBC-Pexip-Original-Uploaders: Mark Pilgrim <mark@diveintomark.org>, Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Build-Depends: python (>= 2.6.6-3~), debhelper (>= 7)
 Standards-Version: 3.9.2
 Homepage: http://chardet.feedparser.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/chardet/trunk
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/chardet/trunk/
+XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
 
 Package: python-chardet
 Architecture: all

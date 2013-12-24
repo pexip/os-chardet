@@ -1,3 +1,9 @@
+chardet (2.0.1-2build1pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 24 Dec 2013 13:39:13 +0000
+
 chardet (2.0.1-2build1) precise; urgency=low
 
   * Rebuild to drop python2.6 dependencies.
