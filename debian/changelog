@@ -1,3 +1,20 @@
+chardet (2.3.0-2) unstable; urgency=medium
+
+  * debian/control
+    - Remove python-chardet-whl as it's no longer necessary.
+    - Remove python3-wheel from Build-Depends.
+    - Update Vcs fields for git migration.
+    - Use secure URI for Vcs-Git.
+    - Bump Standards-Version to 3.9.7 (no changes needed).
+  * debian/copyright
+    - Update copyright years.
+  * debian/rules
+    - Don't build the wheel package.
+  * debian/watch
+    - Use pypi.debian.net redirector.
+
+ -- Daniele Tricoli <eriol@mornie.org>  Wed, 10 Feb 2016 02:08:56 +0100
+
 chardet (2.3.0-1) unstable; urgency=medium
 
   * New upstream release.
