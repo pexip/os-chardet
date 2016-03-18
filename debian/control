@@ -9,7 +9,7 @@ Standards-Version: 3.9.2
 Homepage: http://chardet.feedparser.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/chardet/trunk
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/chardet/trunk/
-XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: python-chardet
 Architecture: all
