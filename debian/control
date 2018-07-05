@@ -20,7 +20,7 @@ Standards-Version: 3.9.6
 Homepage: https://github.com/chardet/chardet
 Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/chardet/trunk/
 Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/chardet/trunk/
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: python-chardet
 Architecture: all
