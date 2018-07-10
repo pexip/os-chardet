@@ -1,0 +1,11 @@
+# see git-dpm(1) from git-dpm package
+bad2c808cef705bdfdcd34fa09e5432e95de032a
+bad2c808cef705bdfdcd34fa09e5432e95de032a
+bad2c808cef705bdfdcd34fa09e5432e95de032a
+bad2c808cef705bdfdcd34fa09e5432e95de032a
+chardet_2.3.0.orig.tar.gz
+50af8f8771ecbeb7a22567129c6c281b8bec3b1c
+164346
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"
