@@ -1,1 +1,3 @@
+chardet.egg-info/*
 debian/chardet3.1
+.pytest_cache/

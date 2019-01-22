@@ -1,3 +1,54 @@
+chardet (3.0.4-3) unstable; urgency=medium
+
+  * Set debhelper version to (>= 12~) in B-D.
+
+ -- Daniele Tricoli <eriol@debian.org>  Tue, 22 Jan 2019 01:46:22 +0100
+
+chardet (3.0.4-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove ancient X-Python-Version field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Daniele Tricoli ]
+  * Add debian/gbp.conf.
+  * Bump compat level to 12.
+  * Add autopkgtests.
+  * debian/clean
+    - Remove .pytest_cache directory.
+  * debian/control
+    - Mark all packages Multi-Arch: foreign. (Closes: #916072)
+      Thanks to Helmut Grohne for the report and patch.
+    - Update to use my debian.org mail address.
+    - Bump Standards-Version to 4.3.0 (no changes needed).
+  * debian/copyright
+    - Update to use my debian.org mail address.
+    - Update copyright years.
+
+ -- Daniele Tricoli <eriol@debian.org>  Sun, 06 Jan 2019 21:20:36 +0100
+
+chardet (3.0.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Run tests at build time.
+  * debian/clean
+    - Clean egg-info.
+  * debian/control
+    - Bump Standards-Version to 3.9.8 (no changes needed).
+    - Add python{,3}-pytest and python{,3}-hypothesis to B-D.
+  * debian/copyright
+    - Update copyright years.
+    - Update Upstream-Contact.
+    - Update chardetect stanza.
+  * debian/rules
+    - Add override_dh_auto_test stanza.
+    - Clean stuff created by hypothesis.
+
+ -- Daniele Tricoli <eriol@mornie.org>  Sun, 18 Jun 2017 23:51:08 +0200
+
 chardet (2.3.0-2) unstable; urgency=medium
 
   * debian/control
@@ -37,7 +88,7 @@ chardet (2.2.1-2) unstable; urgency=medium
     - Add python3-wheel to Build-Depends.
     - Add python-chardet-whl binary package.
     - Clean up whitespace.
-  * d/rules: 
+  * d/rules:
     - Build the universal wheels.
     - Override dh_python3 to set the shebang line to /usr/bin/python3
       (Closes: #741340)
@@ -138,4 +189,3 @@ chardet (1.0-1) unstable; urgency=low
   * Initial release (closes: #375809)
 
  -- Piotr Ozarowski <ozarow@gmail.com>  Sat,  8 Jul 2006 16:12:00 +0200
-
