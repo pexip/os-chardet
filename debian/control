@@ -19,7 +19,7 @@ Standards-Version: 3.9.7
 Homepage: https://github.com/chardet/chardet
 Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/chardet.git
 Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/chardet.git
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: python-chardet
 Architecture: all
