@@ -1,3 +1,9 @@
+chardet (3.0.4-3pexip1) pexip; urgency=medium
+
+  * Migrate to Buster
+
+ -- Vincent Sanders <vince@pexip.com>  Fri, 28 Feb 2020 10:35:16 +0000
+
 chardet (3.0.4-3) unstable; urgency=medium
 
   * Set debhelper version to (>= 12~) in B-D.
