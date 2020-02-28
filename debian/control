@@ -6,23 +6,27 @@ XSBC-Pexip-Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
 XSBC-Pexip-Original-Uploaders:
  Mark Pilgrim <mark@diveintomark.org>,
  Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>,
- Daniele Tricoli <eriol@mornie.org>
+ Daniele Tricoli <eriol@debian.org>
 Build-Depends:
- debhelper (>= 9),
+ debhelper (>= 12~),
  dh-python,
  python-all (>= 2.6.6-3),
+ python-hypothesis,
+ python-pytest,
  python-setuptools (>= 0.6b3),
  python3-all,
+ python3-hypothesis,
+ python3-pytest,
  python3-setuptools,
-X-Python-Version: >= 2.6
-Standards-Version: 3.9.7
+Standards-Version: 4.3.0
 Homepage: https://github.com/chardet/chardet
-Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/chardet.git
-Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/chardet.git
+Vcs-Git: https://salsa.debian.org/python-team/modules/chardet.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/chardet
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: python-chardet
 Architecture: all
+Multi-Arch: foreign
 Depends:
  ${python:Depends},
  ${misc:Depends},
@@ -49,6 +53,7 @@ Description: universal character encoding detector for Python2
 
 Package: python3-chardet
 Architecture: all
+Multi-Arch: foreign
 Depends:
  ${python3:Depends},
  ${misc:Depends},

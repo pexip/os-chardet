@@ -1,3 +1,3 @@
 [console_scripts]
-chardetect = chardet.chardetect:main
+chardetect = chardet.cli.chardetect:main
 
