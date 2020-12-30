@@ -1,3 +1,53 @@
+chardet (4.0.0-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 30 Dec 2020 17:42:51 +0100
+
+chardet (3.0.4-7) unstable; urgency=medium
+
+  * Team upload
+  * Fix a typo in symlinks (Closes: #958518)
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Thu, 23 Apr 2020 13:51:53 +0200
+
+chardet (3.0.4-6) unstable; urgency=medium
+
+  * Team upload
+  * Drop Python2 package (Closes: #936289)
+  * Bump Standards-Version to 4.5.0.
+  * Add specific versions for the Breaks/Replaces of python3-chardet
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Wed, 22 Apr 2020 17:22:40 +0200
+
+chardet (3.0.4-5) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Sandro Tosi ]
+  * Dont run unittests for python2 binary, to reduce pytest rdeps
+
+ -- Sandro Tosi <morph@debian.org>  Mon, 13 Apr 2020 18:19:38 -0400
+
+chardet (3.0.4-4) unstable; urgency=medium
+
+  * Team upload.
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.0.
+  * Fix FTBFS with Pytest 4.
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 13 Aug 2019 11:30:29 +0200
+
 chardet (3.0.4-3) unstable; urgency=medium
 
   * Set debhelper version to (>= 12~) in B-D.
