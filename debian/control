@@ -22,7 +22,7 @@ Standards-Version: 4.3.0
 Homepage: https://github.com/chardet/chardet
 Vcs-Git: https://salsa.debian.org/python-team/modules/chardet.git
 Vcs-Browser: https://salsa.debian.org/python-team/modules/chardet
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: python-chardet
 Architecture: all
