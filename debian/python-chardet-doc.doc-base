@@ -1,0 +1,12 @@
+Document: chardet
+Title: Chardet Documentation
+Author: Mark Pilgrim, Dan Blanchard, Ian Cordasco
+Abstract: Character encoding auto-detection in Python. As smart as your browser.
+Section: Programming/Python
+
+Format: text
+Files: /usr/share/doc/python-chardet-doc/html/_sources/*.txt
+
+Format: HTML
+Index: /usr/share/doc/python-chardet-doc/html/index.html
+Files: /usr/share/doc/python-chardet-doc/html/*.html

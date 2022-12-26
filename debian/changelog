@@ -1,3 +1,35 @@
+chardet (5.1.0+dfsg-2) unstable; urgency=medium
+
+  * Rebuild to workaround bin-only NEW → source only testing migration
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 26 Dec 2022 15:42:05 +0100
+
+chardet (5.1.0+dfsg-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * d/watch: Switch to git mode on the GitHub repository
+  * d/gbp.conf: Extend some more defaults
+  * New upstream version 5.1.0+dfsg
+  * d/control: Update build depending packages
+  * d/rules: Update targets and additional needed data
+  * autopkgtest: Adjust the test control and build data
+  * d/control: Increase Standards-Version to 4.6.1
+  * d/control: Adding Rules-Requires-Root: no
+  * Lintian: Ignore some test files which contains binary parts
+  * d/u/metadata: Adding Documentation key
+  * d/copyright: Update and adjust content data
+  * python3-chardet: Update package descriptions
+  * python-chardet-doc: Adding new documentation package
+  * d/README.source: Add some information about the source
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 10 Dec 2022 13:32:37 +0100
+
+chardet (4.0.0-2) unstable; urgency=medium
+
+  * Use the new Debian Python Team contact name and address
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 22 Apr 2022 15:14:29 -0400
+
 chardet (4.0.0-1) unstable; urgency=medium
 
   [ Debian Janitor ]
