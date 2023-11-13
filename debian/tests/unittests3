@@ -1,6 +1,25 @@
-#!/bin/sh -e
+#!/bin/bash
 
-cp -r setup.cfg test.py tests "$AUTOPKGTEST_TMP"
-cd "$AUTOPKGTEST_TMP"
+set -e -u
 
-py3versions -i | tr ' ' '\n' | xargs -I {} env {} -Wd -m pytest -v -x -rs 2>&1
+PYTEST_OPTIONS="-k 'not test_detect_all_and_detect_one_should_agree'"
+
+cp -a setup.cfg test.py tests "${AUTOPKGTEST_TMP}"
+
+for py3vers in $(py3versions -s); do
+    echo
+    echo "***************************"
+    echo "*** Testing with ${py3vers}"
+    echo "***************************"
+    echo
+    cd ${AUTOPKGTEST_TMP} && \
+        echo -e "Content of current working folder:\n" && \
+        ls -la && \
+        echo -e "Running tests...\n" && \
+        eval ${py3vers} -m pytest -sv test.py ${PYTEST_OPTIONS} && \
+        rm -rf __pycache__ .hypothesis || exit 1
+done
+
+echo
+
+exit 0

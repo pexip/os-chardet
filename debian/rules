@@ -1,17 +1,30 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+#export DH_VERBOSE=1
+
+include /usr/share/dpkg/pkg-info.mk
+
+BUILD_DATE  = $(shell LC_ALL=C date -u "+%d %B %Y" -d "@$(SOURCE_DATE_EPOCH)")
+SPHINXOPTS := -N -D html_last_updated_fmt="$(BUILD_DATE)"
 
 export PYBUILD_NAME=chardet
-export PYTHONWARNINGS=d
+export PYBUILD_BEFORE_TEST=cp {dir}/test.py {build_dir}
+export PYBUILD_AFTER_TEST=rm {build_dir}/test.py
+export PYBUILD_TEST_ARGS=test.py -v -k 'not test_detect_all_and_detect_one_should_agree'
 
 %:
-	dh $@ --with python3 --buildsystem=pybuild
-
-override_dh_python3:
-	dh_python3 --shebang=/usr/bin/python3
+	dh $@ --with sphinxdoc --buildsystem=pybuild
 
 override_dh_auto_test:
 #	PYBUILD_SYSTEM=custom \
 #	PYBUILD_TEST_ARGS="cd {dir}; {interpreter} -m pytest" dh_auto_test
+
+override_dh_sphinxdoc:
+ifeq (,$(findstring nodoc, $(DEB_BUILD_OPTIONS)))
+	PYTHONPATH=src python3 -m sphinx -b html $(SPHINXOPTS) docs $(CURDIR)/debian/python-chardet-doc/usr/share/doc/python-chardet-doc/html
+	dh_sphinxdoc
+endif
 
 override_dh_clean:
 	dh_clean

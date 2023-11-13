@@ -5,20 +5,58 @@ Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
 XSBC-Pexip-Original-Uploaders:
  Mark Pilgrim <mark@diveintomark.org>,
- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>,
+ Debian Python Team <team+python@tracker.debian.org>,
  Daniele Tricoli <eriol@debian.org>
 Build-Depends:
- debhelper-compat (= 12),
- dh-python,
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ pybuild-plugin-pyproject,
  python3-all,
- python3-hypothesis,
- python3-pytest,
+ python3-hypothesis <!nocheck>,
+ python3-pytest <!nocheck>,
  python3-setuptools,
-Standards-Version: 4.5.0
+ python3-sphinx <!nodoc>,
+ python3-sphinx-rtd-theme <!nodoc>,
+Standards-Version: 4.6.1
+Rules-Requires-Root: no
 Homepage: https://github.com/chardet/chardet
 Vcs-Git: https://salsa.debian.org/python-team/packages/chardet.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/chardet
 XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
+
+Package: python-chardet-doc
+Section: doc
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${sphinxdoc:Depends},
+Multi-Arch: foreign
+Description: Universal Character Encoding Detector (Documentation)
+ Chardet is a continuation of Mark Pilgrim's excellent original chardet port
+ from C, and Ian Cordasco's charade Python 3-compatible fork.
+ Chardet takes a sequence of bytes in an unknown character encoding, and
+ attempts to determine the encoding.
+ .
+ Supported encodings:
+  * Big5, GB2312/GB18030, EUC-TW, HZ-GB-2312, and ISO-2022-CN (Traditional
+    and Simplified Chinese)
+  * EUC-JP, SHIFT_JIS, and ISO-2022-JP (Japanese)
+  * EUC-KR and ISO-2022-KR (Korean)
+  * KOI8-R, MacCyrillic, IBM855, IBM866, ISO-8859-5, and windows-1251 (Russian)
+  * ISO-8859-2 and windows-1250 (Hungarian)
+  * ISO-8859-5 and windows-1251 (Bulgarian)
+  * ISO-8859-1 and windows-1252 (Western European languages)
+  * ISO-8859-7 and windows-1253 (Greek)
+  * ISO-8859-8 and windows-1255 (Visual and Logical Hebrew)
+  * TIS-620 (Thai)
+  * UTF-32 BE, LE, 3412-ordered, or 2143-ordered (with a BOM)
+  * UTF-16 BE or LE (with a BOM)
+  * UTF-8 (with or without a BOM)
+  * ASCII
+ .
+ This library is a port of the auto-detection code in Mozilla.
+ .
+ This package contains the documentation of the library.
 
 Package: python3-chardet
 Architecture: all
@@ -29,23 +67,28 @@ Depends:
  python3-pkg-resources
 Breaks: python-chardet (<< 3.0.4-6)
 Replaces: python-chardet (<< 3.0.4-6)
-Description: universal character encoding detector for Python3
+Description: Universal Character Encoding Detector (Python3)
+ Chardet is a continuation of Mark Pilgrim's excellent original chardet port
+ from C, and Ian Cordasco's charade Python 3-compatible fork.
  Chardet takes a sequence of bytes in an unknown character encoding, and
  attempts to determine the encoding.
  .
  Supported encodings:
-  * ASCII, UTF-8, UTF-16 (2 variants), UTF-32 (4 variants)
-  * Big5, GB2312, EUC-TW, HZ-GB-2312, ISO-2022-CN (Traditional and Simplified
-    Chinese)
-  * EUC-JP, SHIFT_JIS, ISO-2022-JP (Japanese)
-  * EUC-KR, ISO-2022-KR (Korean)
-  * KOI8-R, MacCyrillic, IBM855, IBM866, ISO-8859-5, windows-1251 (Cyrillic)
-  * ISO-8859-2, windows-1250 (Hungarian)
-  * ISO-8859-5, windows-1251 (Bulgarian)
-  * windows-1252 (English)
-  * ISO-8859-7, windows-1253 (Greek)
-  * ISO-8859-8, windows-1255 (Visual and Logical Hebrew)
+  * Big5, GB2312/GB18030, EUC-TW, HZ-GB-2312, and ISO-2022-CN (Traditional
+    and Simplified Chinese)
+  * EUC-JP, SHIFT_JIS, and ISO-2022-JP (Japanese)
+  * EUC-KR and ISO-2022-KR (Korean)
+  * KOI8-R, MacCyrillic, IBM855, IBM866, ISO-8859-5, and windows-1251 (Russian)
+  * ISO-8859-2 and windows-1250 (Hungarian)
+  * ISO-8859-5 and windows-1251 (Bulgarian)
+  * ISO-8859-1 and windows-1252 (Western European languages)
+  * ISO-8859-7 and windows-1253 (Greek)
+  * ISO-8859-8 and windows-1255 (Visual and Logical Hebrew)
   * TIS-620 (Thai)
+  * UTF-32 BE, LE, 3412-ordered, or 2143-ordered (with a BOM)
+  * UTF-16 BE or LE (with a BOM)
+  * UTF-8 (with or without a BOM)
+  * ASCII
  .
  This library is a port of the auto-detection code in Mozilla.
  .

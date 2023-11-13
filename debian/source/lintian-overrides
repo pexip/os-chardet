@@ -1,0 +1,8 @@
+# All these files are testdata and do not get used within the package build nor
+# getting used later within the library. We can ignore them.
+source: source-is-missing [tests/UTF-32BE/plane1-utf-32be.html]
+source: source-is-missing [tests/UTF-32LE/plane1-utf-32le.html]
+source: source-is-missing [tests/ascii/_mozilla_bug638318_text.html]
+source: source-is-missing [tests/iso-8859-6-arabic/_chromium_ISO-8859-6_with_no_encoding_specified.html]
+source: source-is-missing [tests/windows-1256-arabic/_chromium_windows-1256_with_no_encoding_specified.html]
+source: source-contains-prebuilt-windows-binary [tests/iso-8859-7-greek/_ude_1.txt]
