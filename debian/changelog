@@ -1,3 +1,16 @@
+chardet (5.2.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Drop explicit dependency on python3-pkg-resources (Closes: #1083335)
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 13 Jan 2025 15:01:56 +0100
+
+chardet (5.2.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 20 Aug 2023 14:12:03 +0200
+
 chardet (5.1.0+dfsg-2+pexip24u3) pexip-bookworm; urgency=medium
 
   * New versioning scheme

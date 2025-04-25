@@ -64,7 +64,6 @@ Multi-Arch: foreign
 Depends:
  ${python3:Depends},
  ${misc:Depends},
- python3-pkg-resources
 Breaks: python-chardet (<< 3.0.4-6)
 Replaces: python-chardet (<< 3.0.4-6)
 Description: Universal Character Encoding Detector (Python3)
